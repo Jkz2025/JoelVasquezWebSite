@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Login from "./components/Login.jsx";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { Container } from "@mui/system";
 import { PaginaPrincipal } from "./components/PaginaPrincipal.jsx";

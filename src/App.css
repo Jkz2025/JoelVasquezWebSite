@@ -3,3 +3,5 @@
     display: flex;
     justify-content: center;
 }
+
+@import "../node_modules/bootstrap/scss/bootstrap";

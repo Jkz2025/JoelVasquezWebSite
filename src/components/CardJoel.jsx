@@ -15,7 +15,7 @@ export default function MediaCard() {
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         sx={{ height: 140 }}
-        image="https://scontent.fclo1-4.fna.fbcdn.net/v/t39.30808-6/327095587_938015837479095_3125852248518121579_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeF9Ss53FEuX605IhW0XB1SJ3vqieDi9hore-qJ4OL2GiqVEbEIbYZT8v70awtlc7AnNODNJHn-LrCuD7f0TriYZ&_nc_ohc=6sQxxgiTO3kAX9s3B4A&_nc_ht=scontent.fclo1-4.fna&oh=00_AfCmR-fo3WnNwsUKcSGwnK5YWEmXk0_CpSBScnJPQ5hBvw&oe=63F82729"
+        image="https://scontent.fclo1-4.fna.fbcdn.net/v/t39.30808-6/311868521_106947825551416_2588292935968046165_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_eui2=AeHBEflfefET_2-2PUxDjBDugwc1N8C-H1eDBzU3wL4fV6Ifc7cC3UTqQfquQD1V86_kuPIOzvQngyyHG4W_Czfo&_nc_ohc=3LJXv6vZXm0AX842dsS&_nc_ht=scontent.fclo1-4.fna&oh=00_AfAhGthwDirE4NOOAvAMZZEqeBv1unrekACnHaIP0upSqg&oe=63FD1D99"
         title="Joel Vasquez Dj"
       />
       <CardContent>

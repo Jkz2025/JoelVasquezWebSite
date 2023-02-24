@@ -56,7 +56,7 @@ export function Navbar(props) {
         <ThemeProvider theme={darkTheme}>
           <AppBar >
               <Toolbar>
-                <Link to="/JoelPage">
+                <Link to="/JoelPage/Home">
                   <IconButton edge="start">
                     <img
                       src={logo}

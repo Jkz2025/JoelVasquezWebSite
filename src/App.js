@@ -8,17 +8,51 @@ import Portafolio from "./components/Portafolio.jsx";
 import Usuarios from "./components/Usuarios.jsx";
 import InformacionGeneral from "./components/InformacionGeneral.jsx";
 import Administracion from "./components/Administracion.jsx";
+import Home from "./components/Home.jsx";
+import { useState } from "react";
+import { ProtectedRoute } from "./components/ProtectedRoute.jsx/ProtectedRoute.jsx";
 //prueba
 const App = () => {
+  const [isAllowed, setIsAllowed] = useState()
+  const [user,setUser] = useState()
+  const [login, setLogin] = useState(true)
+   const [miLogin, setMiLogin] = useState("false");
+  // en proceso...
+  // const logout = () => setUser(null) 
+
+
+  const functionToGetchildData = (validateRouteLogin) => {
+    if (validateRouteLogin === false){
+      setIsAllowed(true)
+    } else {
+      setIsAllowed(false)
+      isAllowed(false)
+      
+    }
+    console.log('isAllowed',isAllowed)
+  }
   return (
     <Container>
       <div className="App">
         <BrowserRouter>
+        <Routes>
+            {/* PARA PROTEGER RUTA */}
+            <Route element={<ProtectedRoute  isAllowed={isAllowed}/>}>
+            <Route path="/JoelPage/Portafolio" element={<Portafolio />} />
+            </Route>
+          </Routes>
+
+          <Routes>
+          <Route path="/JoelPage/Home" element={<Home />} />
+          </Routes>
+
           <Routes>
             {/* Para que por defecto al ingresar a la pagina cargue Login */}
             <Route index element={<Login />} />
-            <Route path="/Login" element={<Login />} />
+            <Route path="/Login" element={<Login childToParentData={functionToGetchildData}/>} />
           </Routes>
+
+         
 
           <Routes>
             <Route
@@ -27,10 +61,7 @@ const App = () => {
             />
           </Routes>
 
-          <Routes>
-            <Route path="/JoelPage/Portafolio/" element={<Portafolio />} />
-          </Routes>
-
+        
           <Routes>
             <Route path="/JoelPage/Users/" element={<Usuarios />} />
           </Routes>
